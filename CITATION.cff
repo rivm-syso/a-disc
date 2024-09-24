@@ -1,0 +1,120 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  A-DISC pipeline's template - regarding the manuscript
+  “Automating COVID-19 epidemiological situation reports
+  based on multiple data sources, the Netherlands, 2020 to
+  2023.” 
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Priscila
+    name-particle: de
+    family-names: Oliveira Bressane Lima
+    email: priscila.de.oliveira.bressane.lima@rivm.nl
+    affiliation: >-
+      Centre for Infectious Disease Control, National
+      Institute for Public Health, and the Environment
+      (RIVM), Bilthoven, the Netherlands
+    orcid: 'https://orcid.org/0000-0002-4459-6921'
+  - given-names: Jan
+    name-particle: van de
+    family-names: Kassteele
+    email: jan.van.de.kassteele@rivm.nl
+    affiliation: >-
+      Centre for Infectious Disease Control, National
+      Institute for Public Health, and the Environment
+      (RIVM), Bilthoven, the Netherlands
+    orcid: 'https://orcid.org/0000-0001-5926-6709'
+  - given-names: Maarten
+    family-names: Schipper
+    email: maarten.schipper@rivm.nl
+    affiliation: >-
+      Centre for Infectious Disease Control, National
+      Institute for Public Health, and the Environment
+      (RIVM), Bilthoven, the Netherlands
+    orcid: 'https://orcid.org/0000-0001-6227-4603'
+identifiers:
+  - type: url
+    value: 'https://github.com/rivm-syso/a-disc'
+    description: A-DISC pipeline’s template repository
+abstract: |-
+  Background:
+
+    During the COVID-19 pandemic, the National Institute for
+    Public Health and the Environment in the Netherlands
+    developed a pipeline of scripts to automate and streamline
+    the production of epidemiological situation reports
+    (epi-sitrep). The pipeline was developed for the
+    Automation of Data Import, Summarization, and
+    Communication (hereafter called the A-DISC pipeline).
+
+
+    Objective:
+
+    This paper describes the A-DISC pipeline and provides a
+    customizable scripts template that may be useful for other
+    countries wanting to automate their infectious disease
+    surveillance processes.
+
+
+    Methods:
+
+    The A-DISC pipeline was developed using the open-source
+    statistical software R. It is organized in four modules:
+    Prepare, Process data, Produce report, and Communicate.
+    The Prepare scripts set the working environment (e.g.,
+    load packages). The (data-specific) Process data scripts
+    import, validate, verify, transform, save, analyze, and
+    summarize data as tables and figures and store these data
+    summaries. The Produce report scripts gather summaries
+    from multiple data sources and integrate them into a
+    RMarkdown document – the epi-sitrep. The Communicate
+    scripts send e-mails to stakeholders with the epi-sitrep. 
+
+
+    Results:
+
+    As of March 2023, up to ten data sources were
+    automatically summarized into tables and figures by
+    A-DISC. These data summaries were featured in routine
+    extensive COVID-19 epi-sitreps, shared as open data,
+    plotted on RIVM’s website, sent to stakeholders and
+    submitted to European Centre for Disease Prevention and
+    Control via the European Surveillance System -TESSy.
+
+
+    Discussion:
+
+    In the face of an unprecedented high number of cases being
+    reported during the COVID-19 pandemic, the A-DISC pipeline
+    was essential to produce frequent and comprehensive
+    epi-sitreps. A-DISC’s modular and intuitive structure
+    allowed for the integration of data sources of varying
+    complexities, encouraged collaboration among people with
+    various R-scripting capabilities, and improved data
+    lineage. The A-DISC pipeline remains under active
+    development and is currently being used in modified form
+    for the automatization and professionalization of various
+    other disease surveillance processes at the RIVM, with
+    high acceptance from the participant epidemiologists.
+
+
+    Conclusion
+
+    The A-DISC pipeline is an open-source, robust, and
+    customizable tool for automating epi-sitreps based on
+    multiple data sources. 
+keywords:
+  - COVID-19
+  - automated infectious diseases surveillance
+  - epidemiological situation reports
+  - epidemic response
+  - R scripts pipeline
+  - automated infectious diseases monitoring
+license: MIT
+version: 1.0.0.
