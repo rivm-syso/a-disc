@@ -1,0 +1,95 @@
+---
+title: "Epidemiological situation of COVID-19 in the Netherlands"
+output: html_document
+---
+
+```{r setup_chunks, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+```{r setup_library, include=FALSE}
+library(kableExtra)
+library(patchwork)
+```
+
+`r format(date_report, "%e %B %Y")`  
+\
+**Disclaimer**:\
+This report is merely illustrative. Official reports on the COVID-19 epidemiological situation in the Netherlands can be found [here](https://www.rivm.nl/coronavirus-covid-19/actueel/wekelijkse-update-epidemiologische-situatie-covid-19-in-nederland).
+
+\
+\
+\
+\
+\
+\
+
+##### **COVID-19 notifications**\
+Source: [RIVMdata](https://data.rivm.nl/meta/srv/eng/catalog.search;jsessionid=7E3B438E1812BD5F2AE74734A9B43230#/metadata/2c4357c8-76e4-4662-9574-1deb8a73f724).
+
+\
+\
+
+Number of COVID-19 notifications per day in the last complete week  
+```{r table_notifications_number_per_day_last_7days_average_total, echo=FALSE}
+table_notifications_number_per_day_last_7days_average_total %>%
+  rename(
+    `Date of statistics` = date_statistics,
+    `Number of notifications` = number_notifications
+  ) %>%
+  kable(
+    booktabs = T, linesep = "",
+    caption = ""
+  ) %>%
+  kable_styling(latex_options = c("hold_position"), font_size = 14) %>%
+  column_spec(1:2, width = "50mm")
+```
+
+\
+Number of COVID-10 notifications per week since `r format(date_start_last_wave, "%e %B %Y")`  
+```{r graph_notifications_number_per_week, echo=FALSE}
+graph_notifications_number_per_week %>% 
+  ggplotly()
+```
+
+\
+Number of COVID-10 notifications per age group, per week since `r format(date_start_last_wave, "%e %B %Y")`
+```{r graph_notifications_incidence_per_week_per_age_group, echo=FALSE}
+graph_notifications_incidence_per_week_per_age_group %>% 
+  ggplotly()
+```
+
+\
+Number of COVID-10 notifications per province inhabitants in the last complete week  
+```{r map_notifications_incidence_per_province_last_week, echo=FALSE}
+map_notifications_incidence_per_province_last_week
+```
+
+\
+\
+\
+\
+\
+\
+
+##### **SARS-CoV-2 tests**\
+Source: [RIVMdata](https://data.rivm.nl/meta/srv/eng/catalog.search;jsessionid=7E3B438E1812BD5F2AE74734A9B43230#/metadata/0f3336f5-0f16-462c-9031-bb60adde4af1).
+
+\
+\
+Number of SARS-CoV-2 tests with results and positive tests (A) and percentage positive tests (B) per week since `r format(date_expansion_testing, "%e %B %Y")`  
+```{r graph_tests_number_results_positive_per_week, echo=FALSE}
+graph_tests_number_results_positive_per_week / graph_tests_percentage_positive_per_week +
+  plot_annotation(tag_levels = "A")
+```
+
+\
+Percentage positive tests per province in the last complete week  
+```{r graph_tests_percentage_positive_per_province_last_week, echo=FALSE}
+map_tests_percentage_positive_per_province_last_week
+```
+

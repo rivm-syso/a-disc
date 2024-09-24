@@ -1,0 +1,6 @@
+logger::log_info("define_objects")
+source("scripts/01_prepare/prepare/define_objects/functions.R")
+source("scripts/01_prepare/prepare/define_objects/dates.R")
+source("scripts/01_prepare/prepare/define_objects/relational_tables.R")
+source("scripts/01_prepare/prepare/define_objects/colors.R")
+source("scripts/01_prepare/prepare/define_objects/themes.R")
