@@ -1,6 +1,5 @@
 # This CITATION.cff file was generated with cffinit.
 # Visit https://bit.ly/cffinit to generate yours today!
-
 cff-version: 1.2.0
 title: >-
   A-DISC pipeline's template - regarding the manuscript
@@ -44,7 +43,6 @@ identifiers:
     description: A-DISC pipeline’s template repository
 abstract: |-
   Background:
-
     During the COVID-19 pandemic, the National Institute for
     Public Health and the Environment in the Netherlands
     developed a pipeline of scripts to automate and streamline
@@ -53,17 +51,13 @@ abstract: |-
     Automation of Data Import, Summarization, and
     Communication (hereafter called the A-DISC pipeline).
 
-
     Objective:
-
     This paper describes the A-DISC pipeline and provides a
     customizable scripts template that may be useful for other
     countries wanting to automate their infectious disease
     surveillance processes.
 
-
     Methods:
-
     The A-DISC pipeline was developed using the open-source
     statistical software R. It is organized in four modules:
     Prepare, Process data, Produce report, and Communicate.
@@ -76,9 +70,7 @@ abstract: |-
     RMarkdown document – the epi-sitrep. The Communicate
     scripts send e-mails to stakeholders with the epi-sitrep. 
 
-
     Results:
-
     As of March 2023, up to ten data sources were
     automatically summarized into tables and figures by
     A-DISC. These data summaries were featured in routine
@@ -87,9 +79,7 @@ abstract: |-
     submitted to European Centre for Disease Prevention and
     Control via the European Surveillance System -TESSy.
 
-
     Discussion:
-
     In the face of an unprecedented high number of cases being
     reported during the COVID-19 pandemic, the A-DISC pipeline
     was essential to produce frequent and comprehensive
@@ -103,9 +93,7 @@ abstract: |-
     other disease surveillance processes at the RIVM, with
     high acceptance from the participant epidemiologists.
 
-
     Conclusion
-
     The A-DISC pipeline is an open-source, robust, and
     customizable tool for automating epi-sitreps based on
     multiple data sources. 
@@ -118,3 +106,5 @@ keywords:
   - automated infectious diseases monitoring
 license: MIT
 version: 1.0.0
+doi: 10.21945/6c6e55d4-0255-444e-bf31-a9886c23920b
+date-released: 2024-09-24
