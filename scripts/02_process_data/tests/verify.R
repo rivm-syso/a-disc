@@ -1,4 +1,5 @@
 logger::log_info("=== verify records tests ===")
+logger::log_info("verify records tests: see output/verify/")
 
 # check for unlikely results
 # check whether the number of tests remarkably differ from previous week 

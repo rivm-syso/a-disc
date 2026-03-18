@@ -1,4 +1,5 @@
 logger::log_info("=== verify records notifications ===")
+logger::log_info("verify records notifications: see output/verify/")
 
 # Verify missing week_of_death
 list("Missing_week_of_death" = data_notifications_raw %>%

@@ -1,3 +1,4 @@
+logger::log_info("summarize notifications: table_notifications_number_per_date_sex_age_province")
 #
 # Table aggregated data per date, age category, sex and province
 # 

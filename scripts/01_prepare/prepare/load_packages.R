@@ -1,12 +1,25 @@
 logger::log_info("load_packages")
-library(tidyverse)
-library(lubridate)
-library(cbsodataR)
-library(sf)
-library(writexl)
-library(knitr)
-library(rmarkdown)
-library(here)
-library(jsonlite)
-library(logger)
-library(plotly)
+# define packages rewuired
+all_packages <- c(
+  "tidyverse", 
+  "lubridate", 
+  "cbsodataR", 
+  "sf", 
+  "writexl", 
+  "knitr", 
+  "rmarkdown", 
+  "here", 
+  "jsonlite", 
+  "logger", 
+  "plotly"
+)
+
+# check whether all packages are installed
+for (package in all_packages) {
+  if (!require(package, character.only = TRUE)) {
+    # install
+    install.packages(package)
+    # load
+    library(package, character.only = TRUE)
+  }
+}

@@ -1,11 +1,12 @@
+logger::log_info("summarize notifications: table_notifications_incidence_per_province_last_week")
 #
 # Table incidence of notifications per province
 #
 
 # Calculate population per province
-tmp_1 <- table_demographic_population_municipality_age_sex %>% 
+tmp_1 <- data_cbs_population_municipality_age_sex %>% 
   left_join(
-    y = relational_table_geographic_regions,
+    y = data_cbs_regions,
     by = "municipality_code") %>% 
   group_by(
     province_code) %>% 

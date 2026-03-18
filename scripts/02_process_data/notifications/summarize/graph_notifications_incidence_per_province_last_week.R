@@ -1,3 +1,8 @@
+logger::log_info("summarize notifications: graph_notifications_incidence_per_province_last_week")
+#
+# Graph notifications incidence per province last week
+# 
+
 tmp_1 <- table_notifications_incidence_per_province_last_week %>%
   arrange(desc(incidence_per_100000)) %>% 
   mutate(
@@ -12,9 +17,9 @@ tmp_1 <- table_notifications_incidence_per_province_last_week %>%
 
 
 tmp_2 <- left_join(
-  x = sf_province,
+  x = sf_cbs_province,
   y = tmp_1,
-  by = c("code" = "province_code"))
+  by = c("statcode" = "province_code"))
 
 
 
@@ -25,7 +30,7 @@ graph_notifications_incidence_per_province_last_week <- ggplot() +
     mapping = aes(fill = incidence_per_100000_category)) +
   
   geom_sf(
-    data = sf_province,  size = 0.4, colour = "grey50", fill = NA) + 
+    data = sf_cbs_province,  size = 0.4, colour = "grey50", fill = NA) + 
   
   
   labs(fill = "Notifications per 100000") +

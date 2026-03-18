@@ -1,3 +1,4 @@
+logger::log_info("summarize notifications: graph_notifications_number_per_week")
 #
 # Graph number of notifications per week
 #

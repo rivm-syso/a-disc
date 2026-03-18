@@ -1,4 +1,5 @@
-
+logger::log_info("summarize notifications: table_notifications_incidence_per_week_per_age_group")
+#
 # Table incidence of notifications per week and per age_group
 #
 
@@ -32,7 +33,7 @@ tmp_1 <- data_notifications %>%
     fill = list(number_notifications = 0L)) 
 
 # Calculate population per age_group 0-19, 20-69, 70+
-tmp_2 <- table_demographic_population_municipality_age_sex %>%
+tmp_2 <- data_cbs_population_municipality_age_sex %>%
   left_join(
     y = relational_table_age %>%
       distinct(
@@ -42,7 +43,7 @@ tmp_2 <- table_demographic_population_municipality_age_sex %>%
   group_by(
     age_group) %>%
   summarize(
-    population = sum(population),
+    population = sum(population, na.rm = TRUE),
     .groups = "drop")
 
 # Calculate incidence of notifications per week and per age_group

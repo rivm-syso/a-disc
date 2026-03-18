@@ -1,3 +1,4 @@
+logger::log_info("summarize notifications: table_notifications_number_per_week")
 #
 # Table number of notifications per week_statistics
 #
