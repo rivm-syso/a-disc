@@ -42,18 +42,18 @@ R version 4.4.1 (2024-06-14) -- "Race for Your Life"
 Copyright (C) 2024 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu
 
-Next to the R base packages, the following packages(_versions) were used
+Next to the R base original packages, the following packages(_versions) were used
 tidyverse_2.0.0
-lubridate_1.9.3
-cbsodataR_1.0.1
-sf_1.0.16
-writexl_1.5.0
-knitr_1.48
-rmarkdown_2.27
+lubridate_1.9.4
+cbsodataR_1.2.1
+sf_1.0.20
+writexl_1.5.4
+knitr_1.50
+rmarkdown_2.29
 here_1.0.1
-jsonlite_1.8.8
-logger_0.2.2
-plotly_4.10.4
+jsonlite_2.0.0
+logger_0.3.0
+plotly_4.11.0
 
 Note that these packages will be automatically installed when running the pipeline.
 
