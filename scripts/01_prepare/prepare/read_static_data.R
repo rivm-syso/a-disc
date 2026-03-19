@@ -4,8 +4,8 @@ logger::log_info("read_static_data")
 # Import data from local folder 
 # as described in the manuscript
 # the data has been previously downloaded and saved as a static file
-function_import_static_data("demographic")
-function_import_static_data("geographic")
+# function_import_static_data("demographic")
+# function_import_static_data("geographic")
 
 
 # Option 2:

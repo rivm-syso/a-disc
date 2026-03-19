@@ -1,5 +1,5 @@
 logger::log_info("load_packages")
-# define packages rewuired
+# define packages required
 all_packages <- c(
   "tidyverse", 
   "lubridate", 

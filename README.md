@@ -4,7 +4,7 @@
 2026-03-18
 
 ## Title
-A-DISC pipeline’s template - regarding the manuscript “Automating COVID-19 epidemiological situation reports based on multiple data sources, the Netherlands, 2020 to 2023.”
+A-DISC pipeline’s template - regarding the manuscript [“Automating COVID-19 epidemiological situation reports based on multiple data sources, the Netherlands, 2020 to 2023.”](https://doi.org/10.1016/j.cmpb.2024.108436)
 
 ## Template code authors (contact) 
 Priscila de Oliveira Bressane Lima (priscila.de.oliveira.bressane.lima@rivm.nl ) 
@@ -31,7 +31,7 @@ The A-DISC pipeline proved its effectiveness by processing several data sources 
 ## How to use
 First you need to have R installed in your computer. See https://statisticswithr.com/installing-r-and-rstudio/.
 
-Clone this git repository into R studio software. See documentation on how to work with git projects in https://docs.gitlab.com/)
+Clone this git repository into R studio software. See documentation on how to work with git projects in https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
 In R, the A-DISC pipeline user runs the script master-script.R, which can be found in folder scripts, to execute the pipeline. The scripts nested in master-script.R will process notification and test data and produce data summaries (final, interim and open data), excel verification documents, and a pdf epi-sitrep document. All these pipeline results can be found in the folder output. Log messages generated during script execution can be found in the folder logs. 
 
@@ -61,7 +61,7 @@ Note that these packages will be automatically installed when running the pipeli
 The repository is not open for contributions, as the A-DISC pipeline that is currently being used for surveillance at RIVM has been enhanced compared to this template code. 
 
 ## License
-See file LICENSE.txt in repository
+See file LICENSE in repository
 
 ## Citation
 See file CITATION.cff in repository
