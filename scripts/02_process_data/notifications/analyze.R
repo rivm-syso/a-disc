@@ -1,3 +1,4 @@
+logger::log_info("=== analyze ===")
 # statistical analyses.
 
 # statistical analyses are not applicable to this template.

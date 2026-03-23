@@ -1,3 +1,4 @@
+logger::log_info("summarize notifications: table_notifications_number_per_day_last_7days_average_total")
 #
 # Table notifications per day in the last week, average and total of the last week
 #

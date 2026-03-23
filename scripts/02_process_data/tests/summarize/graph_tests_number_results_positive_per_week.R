@@ -1,3 +1,5 @@
+logger::log_info("summarize tests: graph_tests_number_results_positive_per_week")
+
 graph_tests_number_results_positive_per_week <- table_tests_number_percentage_positive_per_week %>%
   select(
     !percentage_positive_tests

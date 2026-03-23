@@ -1,3 +1,5 @@
+logger::log_info("summarize tests: table_tests_number_percentage_positive_per_week")
+
 table_tests_number_percentage_positive_per_week <- data_tests %>% 
   left_join(
     y = relational_table_dates,

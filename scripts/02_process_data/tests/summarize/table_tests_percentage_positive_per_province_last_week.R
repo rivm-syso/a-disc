@@ -1,3 +1,4 @@
+logger::log_info("summarize tests: table_tests_percentage_positive_per_province_last_week")
 #
 # Table number and percentage positive tests per province in the last week
 #
@@ -19,7 +20,7 @@ tmp_2 <- tmp_1 %>%
     tested_positive = sum(tested_positive),
     .groups = "drop") %>% 
   complete(
-    province_code = relational_table_geographic_regions %>%
+    province_code = data_cbs_regions %>%
       distinct(province_code) %>% 
       pull(province_code),
     fill = list(

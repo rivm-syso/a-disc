@@ -1,3 +1,8 @@
+logger::log_info("summarize notifications: graph_notifications_incidence_per_week_per_age_group")
+
+#
+# Graph notifications incidence per week, age and group
+#
 graph_notifications_incidence_per_week_per_age_group <- table_notifications_incidence_per_week_per_age_group %>% 
   na.omit() %>% 
   droplevels() %>% 

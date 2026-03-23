@@ -1,7 +1,9 @@
+logger::log_info("summarize tests: map_tests_percentage_positive_per_province_last_week")
+
 map_tests_percentage_positive_per_province_last_week <- left_join(
-  x = sf_province,
+  x = sf_cbs_province,
   y = table_tests_percentage_positive_per_province_last_week,
-  by = c("code" = "province_code")) %>% 
+  by = c("statcode" = "province_code")) %>% 
   
   ggplot() +
   
@@ -9,7 +11,7 @@ map_tests_percentage_positive_per_province_last_week <- left_join(
     mapping = aes(fill = percentage_positive_tests)) +
   
   geom_sf(
-    data = sf_province,  size = 0.4, colour = "grey50", fill = NA) + 
+    data = sf_cbs_province,  size = 0.4, colour = "grey50", fill = NA) + 
   
   
   labs(fill = "Percentage positive tests") +
